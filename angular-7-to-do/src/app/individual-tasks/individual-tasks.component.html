@@ -1,0 +1,23 @@
+<div>
+  <div *ngIf="tasks">
+    <div *ngFor="let task of tasks; index as i" >
+    <span class="col-md-1">
+        <input type="checkbox" />
+    </span>
+      <span class="col-md-2">
+        {{ i + 1 }}
+    </span>
+      <span class="col-md-5">
+        {{ task.task }}
+    </span>
+      <span class="col-md-2">
+        {{ task.assignee }}
+    </span>
+    </div>
+  </div>
+
+  <app-modify-tasks></app-modify-tasks>
+
+</div>
+
+
